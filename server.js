@@ -79,3 +79,36 @@ app.delete('/api/notes/:id', (req, res) => {
       });
     });
   });
+
+  app.put('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+    const updatedNote = req.body;
+  
+    // Read the existing notes from db.json
+    fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ message: 'Error reading notes' });
+      }
+  
+      let notes = JSON.parse(data);
+      // Find the index of the note with the matching ID
+      const noteIndex = notes.findIndex(note => note.id === noteId);
+  
+      if (noteIndex !== -1) {
+        // Update the note at the found index
+        notes[noteIndex] = { ...notes[noteIndex], ...updatedNote };
+  
+        // Write the updated notes array back to the db.json file
+        fs.writeFile(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes), 'utf8', (err) => {
+          if (err) {
+            console.error(err);
+            return res.status(500).json({ message: 'Error writing updated note' });
+          }
+          res.json(notes[noteIndex]); // Respond with the updated note
+        });
+      } else {
+        res.status(404).json({ message: 'Note not found' });
+      }
+    });
+  });
