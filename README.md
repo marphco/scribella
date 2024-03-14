@@ -12,7 +12,7 @@ Scribella is an intuitive web-based note-taking application designed to help use
 - [Questions](#questions)
 
 ## Usage
-To use Scribella you only need to navigate [this link](#).
+To use Scribella you only need to navigate [this link](https://scribella-804de12279f0.herokuapp.com/notes.html).
 
 https://github.com/marphco/scribella/assets/5993166/b63d19a1-8840-483a-83c1-da92d736c15f
 
