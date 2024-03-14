@@ -14,7 +14,7 @@ Scribella is an intuitive web-based note-taking application designed to help use
 ## Usage
 To use Scribella you only need to navigate [this link](#).
 
-
+https://github.com/marphco/scribella/assets/5993166/b63d19a1-8840-483a-83c1-da92d736c15f
 
 ## License
 This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
