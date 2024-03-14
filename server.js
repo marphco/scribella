@@ -4,7 +4,7 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid'); // This is for generating unique IDs for each note
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Body parser middleware to handle JSON payloads
 app.use(express.json());
