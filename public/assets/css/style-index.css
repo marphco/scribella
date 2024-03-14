@@ -1,0 +1,22 @@
+body {
+    background-color: #48168b;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.btn-primary {
+    background-color: #48168b;
+    border-color: white;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    border-color: white;
+    color: #48168b;
+}
